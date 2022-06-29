@@ -1,0 +1,32 @@
+### Homepage
+GET http://localhost:3000 HTTP/1.1
+
+
+### Get all flights
+GET http://localhost:3000/flights HTTP/1.1
+
+
+### Add new flight: Include only title and price. Time, Id and Date will be automatically added
+POST http://localhost:3000/flights HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Ilorin to Lagos",
+    "price": 11000
+}
+
+
+### Find a flight by id: check all flights for the id and substitute with <id> below
+GET http://localhost:3000/flights/<id> HTTP/1.1
+
+
+### Update a flight with id: check all flights for the id and substitute with <id> below
+PUT http://localhost:3000/flights/<id> HTTP/1.1
+content-type: application/json
+
+{
+    "price": 200000
+}
+
+### Delete a flight with id: check all flights for the id and substitute with <id> below
+DELETE http://localhost:3000/flights/<id> HTTP/1.1
